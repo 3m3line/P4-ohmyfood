@@ -1,0 +1,116 @@
+@use 'variables';
+
+/***Encart reservation***/
+.reservation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 39px 30px 60px 30px;
+    background-color: variables.$background-color;
+    .titre-home{
+        margin: 0 20px 0 20px;
+        text-align: center;
+    }
+    .subtitle-home{
+        margin: 20px 0 27px 0;
+        text-align: center;
+    }
+}
+
+.fonctionnement{
+    margin: 48px 20px 68px 20px;
+    .fonctionnement__liste{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .fonctionnement__liste__etape{
+            display: flex;
+            position: relative;
+            .fct__liste__number{
+                background-color: variables.$primary-color;
+                color: variables.$text-clair;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                flex-shrink: 0;
+                position: absolute;
+                top: 50px;
+                z-index: 1;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                border-radius: 20px;
+                background-color: variables.$background-color;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                padding: 28px;
+                margin: 24px 0 24px 15px;
+                width: 100%;
+                gap:20px;
+                position: relative;
+                z-index: 0;
+                i{
+                    color: variables.$nuance-text-2;
+                }
+                .fa-store{
+                    color: variables.$primary-color;
+                }
+            }
+        }
+    }
+
+}
+
+.restaurants{
+    background-color: variables.$background-color;
+    padding: 54px 20px 66px 20px;
+    .restaurants__liste{
+        margin-top: 25px;
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        a {
+            text-decoration:none;
+            color:inherit
+        }
+        .restaurants__card{
+            box-sizing: border-box;
+            background-color: variables.$text-clair;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            .restau__card__img{
+                display: flex;
+                position: relative;
+                img{
+                    height: 231px;
+                    width: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 0;
+                    border-radius: 20px 20px 0px 0px;
+                }
+                 span{
+                    background-color: variables.$tertiary-color;
+                    color: variables.$accent-text-color;
+                    padding: 6px 9px 6px 9px;
+                    border-radius: 2px;
+                    position: absolute;
+                    z-index: 1;
+                    top:12px;
+                    right:12px;
+                 }
+            }
+            .restau__card__contenu{
+                display: flex;
+                justify-content: space-between;
+                padding: 16px 25px 18px 16px;
+                i{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
