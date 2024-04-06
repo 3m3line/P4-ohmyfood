@@ -14,7 +14,6 @@ iframe {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 186px;
     }
 /***fonts***/
 // home
@@ -72,14 +71,15 @@ iframe {
     font-family: roboto;
     font-weight: 300;
     font-size: 16px;
+    text-transform: uppercase;
 }
-.card-menu h3{
+.card-menu_plat{
     font-family: Roboto;
     font-weight: 500;
     font-size: 18px;
 }
 
-.card-menu p {
+.card-menu__commentaire{
     font-family: Roboto;
     font-weight: 300;
     font-size: 15px;
@@ -100,7 +100,9 @@ iframe {
     padding: 13px 19px 13px 19px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     text-decoration: none;
-    align-self: center;
+    min-width: 174px;
+    display: block;
+    margin: 0 auto;
 }
 /***header page home***/
 .entete-home{
@@ -138,20 +140,28 @@ iframe {
 }
 
 /***header pages restaurants***/
-.header-restaurants{
-    display: flex;
-    align-items: center;
-    margin: 17px;
-    i{
-        font-size: 30px;
-        color: variables.$nuance-text-1;
-    }
-    #logo-restau{
-        margin: 0 auto;
+.header-restaurants-container{
+    overflow: hidden;
+    .header-restaurants{
+        display: flex;
+        align-items: center;
+        margin: 17px;
+        i{
+            font-size: 30px;
+            color: variables.$nuance-text-1;
+        }
+        #logo-restau{
+            margin: 0 auto;
+        }
     }
 }
 
 /***footer***/
+// code sur page
+.iframe-footer-container{
+    height: 186px;
+}
+// code du template
 .footer-container{
     overflow: hidden;
     height: 100%;

@@ -113,6 +113,68 @@
   font-size: 22px;
 }
 
+.entete-restau {
+  height: 63px;
+}
+
+.encart-photo-menu {
+  height: 220px;
+  display: inline-block;
+}
+.encart-photo-menu .encart-photo-menu__img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  padding: 32px 13px 40px 13px;
+  border-radius: 50px 50px 0px 0px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.menu .menu__titre {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  margin-bottom: 40px;
+}
+.menu .menu__titre i {
+  font-size: 22px;
+}
+.menu .menu__etape {
+  margin-bottom: 40px;
+}
+.menu .menu__etape h2::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 6px;
+}
+.menu .menu__etape .card-menu {
+  margin-top: 12px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.menu .menu__etape .card-menu h3 {
+  margin-bottom: 5px;
+}
+.menu .menu__etape button {
+  display: flex;
+  align-items: center;
+}
+
 /***General***/
 body {
   margin: 0;
@@ -129,7 +191,6 @@ iframe {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 186px;
 }
 
 /***fonts***/
@@ -186,15 +247,16 @@ iframe {
   font-family: roboto;
   font-weight: 300;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
-.card-menu h3 {
+.card-menu_plat {
   font-family: Roboto;
   font-weight: 500;
   font-size: 18px;
 }
 
-.card-menu p {
+.card-menu__commentaire {
   font-family: Roboto;
   font-weight: 300;
   font-size: 15px;
@@ -215,7 +277,9 @@ iframe {
   padding: 13px 19px 13px 19px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   text-decoration: none;
-  align-self: center;
+  min-width: 174px;
+  display: block;
+  margin: 0 auto;
 }
 
 /***header page home***/
@@ -254,20 +318,27 @@ iframe {
 }
 
 /***header pages restaurants***/
-.header-restaurants {
+.header-restaurants-container {
+  overflow: hidden;
+}
+.header-restaurants-container .header-restaurants {
   display: flex;
   align-items: center;
   margin: 17px;
 }
-.header-restaurants i {
+.header-restaurants-container .header-restaurants i {
   font-size: 30px;
   color: #353535;
 }
-.header-restaurants #logo-restau {
+.header-restaurants-container .header-restaurants #logo-restau {
   margin: 0 auto;
 }
 
 /***footer***/
+.iframe-footer-container {
+  height: 186px;
+}
+
 .footer-container {
   overflow: hidden;
   height: 100%;
