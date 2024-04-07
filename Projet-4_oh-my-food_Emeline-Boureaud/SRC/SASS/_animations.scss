@@ -1,1 +1,104 @@
 @use 'variables';
+/*** page home***/
+//loader
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loader {
+    font-size: 50px; /* Taille de l'icône */
+    color: #333; /* Couleur de l'icône */
+    animation: spinLeft 2s linear infinite; /* Animation de rotation */
+  }
+  
+  @keyframes spinLeft {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); } /* Rotation dans le sens inverse (gauche) */
+  }
+
+
+/***page restaurants***/
+// coche et son animation
+.card-menu{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    .card-menu__content{
+        transition: width 0.3s ease-in-out; //Ajout de transitions pour smooth l'animation
+    }
+    .card-menu__icone{
+        position: absolute;
+        top: 0; //Aligne l'icône avec le haut de la carte
+        right: -59px; // Cache l'icône à droite de la carte 
+        width: 59px; // Largeur de l'icône
+        height: 100%; // Hauteur de l'icône (même que la carte)
+        background-color: variables.$tertiary-color; // Couleur de fond du carré vert
+        transition: right 0.3s ease; // Animation de transition
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: variables.$text-clair; 
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &:hover,
+    &:active{
+        .card-menu__content{
+            width: calc(100% - 59px); // Réduisez la largeur du contenu pour laisser de la place à l'icône
+            .card-menu__content__detail{
+                width: calc(100% - 30px);
+                p,
+                h3{
+                    white-space: nowrap; /* Empêche le texte de retourner à la ligne */
+                    overflow: hidden; /* Masque le texte dépassant de la zone définie */
+                    text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer que le texte est rogné */
+                }
+            }
+            
+        }  
+        .card-menu__icone{right: 0; // Déplace l'icône vers la gauche au survol
+        }
+    }
+
+}
+
+//chargement de la page, arrivée progressive
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Début de l'animation : élément transparent */
+      transform: translateY(20px); /* Début de l'animation : élément décalé vers le bas */
+    }
+    to {
+      opacity: 1; /* Fin de l'animation : élément complètement visible */
+      transform: translateY(0); /* Fin de l'animation : élément revenu à sa position normale */
+    }
+}
+
+.menu__etape {
+    opacity: 0; 
+    animation: fadeIn 1s ease forwards; 
+}
+
+.menu__etape.etape1 {
+    animation-delay: 0.1s; 
+}
+  
+.menu__etape.etape2 {
+    animation-delay: 0.5s; 
+}
+  
+.menu__etape.etape3 {
+    animation-delay: 0.9s; 
+}
+

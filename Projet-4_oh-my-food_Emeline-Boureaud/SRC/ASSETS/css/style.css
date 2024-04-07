@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*couleurs*/
 /***Encart reservation***/
 .reservation {
@@ -163,16 +164,112 @@
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 .menu .menu__etape .card-menu h3 {
   margin-bottom: 5px;
 }
-.menu .menu__etape button {
+.menu .menu__etape .card-menu .card-menu__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/*** page home***/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  font-size: 50px; /* Taille de l'icône */
+  color: #333; /* Couleur de l'icône */
+  animation: spinLeft 2s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spinLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  } /* Rotation dans le sens inverse (gauche) */
+}
+/***page restaurants***/
+.card-menu {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card-menu .card-menu__content {
+  transition: width 0.3s ease-in-out;
+}
+.card-menu .card-menu__icone {
+  position: absolute;
+  top: 0;
+  right: -59px;
+  width: 59px;
+  height: 100%;
+  background-color: #99E2D0;
+  transition: right 0.3s ease;
+}
+.card-menu .card-menu__icone i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+.card-menu:hover .card-menu__content, .card-menu:active .card-menu__content {
+  width: calc(100% - 59px);
+}
+.card-menu:hover .card-menu__content .card-menu__content__detail, .card-menu:active .card-menu__content .card-menu__content__detail {
+  width: calc(100% - 30px);
+}
+.card-menu:hover .card-menu__content .card-menu__content__detail p,
+.card-menu:hover .card-menu__content .card-menu__content__detail h3, .card-menu:active .card-menu__content .card-menu__content__detail p,
+.card-menu:active .card-menu__content .card-menu__content__detail h3 {
+  white-space: nowrap; /* Empêche le texte de retourner à la ligne */
+  overflow: hidden; /* Masque le texte dépassant de la zone définie */
+  text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer que le texte est rogné */
+}
+.card-menu:hover .card-menu__icone, .card-menu:active .card-menu__icone {
+  right: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Début de l'animation : élément transparent */
+    transform: translateY(20px); /* Début de l'animation : élément décalé vers le bas */
+  }
+  to {
+    opacity: 1; /* Fin de l'animation : élément complètement visible */
+    transform: translateY(0); /* Fin de l'animation : élément revenu à sa position normale */
+  }
+}
+.menu__etape {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.menu__etape.etape1 {
+  animation-delay: 0.1s;
+}
+
+.menu__etape.etape2 {
+  animation-delay: 0.5s;
+}
+
+.menu__etape.etape3 {
+  animation-delay: 0.9s;
 }
 
 /***General***/
