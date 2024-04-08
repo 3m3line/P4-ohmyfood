@@ -375,6 +375,7 @@
 }
 .like {
   position: relative;
+  cursor: pointer;
 }
 .like .filled-heart {
   width: 22px;
