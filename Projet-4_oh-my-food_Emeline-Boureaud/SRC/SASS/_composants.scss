@@ -103,6 +103,9 @@ iframe {
     min-width: 174px;
     display: block;
     margin: 0 auto;
+    &:hover{
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(to top, variables.$primary-color, variables.$secondary-color);
+    }
 }
 /***header page home***/
 .entete-home{
