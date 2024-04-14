@@ -9,14 +9,6 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 0;
 }
 
-iframe {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    }
-
-
 /***fonts***/
 // home
 .titre-home{
@@ -142,12 +134,8 @@ iframe {
 
 
 /***header pages restaurants***/
-.entete-restau{
-    height: 63px;
-}
-.header-restaurants-container{
-    overflow: hidden;
-    .header-restaurants{
+
+.header-restaurants{
         display: flex;
         align-items: center;
         margin: 17px;
@@ -159,44 +147,33 @@ iframe {
             margin: 0 auto;
         }
     }
-}
 
 /***footer***/
-// code sur page
-.iframe-footer-container{
-    height: 186px;
-}
-
-// code du template
-.footer-container{
-    overflow: hidden;
+footer{
     height: 100%;
-    footer{
-        height: 100%;
-        padding: 22px 25px 22px 25px;
-        background-color: variables.$nuance-text-1;
-        color:variables.$text-clair;
-        img[src="../ASSETS/images/logo/ohmyfood@2x.svg"]{
-            filter: invert(100%);
-            height: 27px;
-            margin-bottom: 16px;
+    padding: 22px 25px 22px 25px;
+    background-color: variables.$nuance-text-1;
+    color:variables.$text-clair;
+    img{
+        filter: invert(100%);
+        height: 27px;
+        margin-bottom: 16px;
         }
-        ul{
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            li{
-                margin-bottom: 7px;
-                display: flex;
-                align-items: center;
-                gap:10px;
-                i{
-                    font-size: 13px;
-                }
-                a{
-                    text-decoration: none;
-                    color:inherit;
-                }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li{
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+            gap:10px;
+            i{
+                font-size: 13px;
+            }
+            a{
+                text-decoration: none;
+                color:inherit;
             }
         }
     }
@@ -204,9 +181,6 @@ iframe {
 
 /***MEDIA QUERY composants***/
 @media (min-width:1025px){
-    .iframe-footer-container{
-        height: 117px;
-    }
     .entete-home{
         #entete-home__logo{
             height: 34px;
@@ -217,30 +191,23 @@ iframe {
             box-shadow: none;
         }
     }
-    .entete-restau{
-        height: 94px;
-    }
-    .header-restaurants-container{
-        .header-restaurants{
+    .header-restaurants{
             margin: 30px;
-        }
     }
-    .footer-container{
-        footer{
-            padding: 60px 70px 30px 70px;
-            display: flex;
-            flex-direction: row-reverse;
-            gap: 100px;
-            align-items: flex-end;
-            img[src="../ASSETS/images/logo/ohmyfood@2x.svg"]{
+    footer{
+        padding: 60px 70px 30px 70px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 100px;
+        align-items: flex-end;
+        img{
             margin-bottom: 0;
-            }
-            ul{
-                display: flex;
-                gap:20px;
-                li{
+        }
+        ul{
+            display: flex;
+            gap:20px;
+            li{
                 margin-bottom: 0;
-                }
             }
         }
     }

@@ -414,13 +414,6 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
-iframe {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 /***fonts***/
 .titre-home {
   font-family: Roboto;
@@ -550,70 +543,52 @@ iframe {
 }
 
 /***header pages restaurants***/
-.entete-restau {
-  height: 63px;
-}
-
-.header-restaurants-container {
-  overflow: hidden;
-}
-.header-restaurants-container .header-restaurants {
+.header-restaurants {
   display: flex;
   align-items: center;
   margin: 17px;
 }
-.header-restaurants-container .header-restaurants i {
+.header-restaurants i {
   font-size: 30px;
   color: #353535;
 }
-.header-restaurants-container .header-restaurants #logo-restau {
+.header-restaurants #logo-restau {
   margin: 0 auto;
 }
 
 /***footer***/
-.iframe-footer-container {
-  height: 186px;
-}
-
-.footer-container {
-  overflow: hidden;
-  height: 100%;
-}
-.footer-container footer {
+footer {
   height: 100%;
   padding: 22px 25px 22px 25px;
   background-color: #353535;
   color: #ffffff;
 }
-.footer-container footer img[src="../ASSETS/images/logo/ohmyfood@2x.svg"] {
+footer img {
   filter: invert(100%);
   height: 27px;
   margin-bottom: 16px;
 }
-.footer-container footer ul {
+footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.footer-container footer ul li {
+footer ul li {
   margin-bottom: 7px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.footer-container footer ul li i {
+footer ul li i {
   font-size: 13px;
 }
-.footer-container footer ul li a {
+footer ul li a {
   text-decoration: none;
   color: inherit;
 }
 
 /***MEDIA QUERY composants***/
 @media (min-width: 1025px) {
-  .iframe-footer-container {
-    height: 117px;
-  }
   .entete-home #entete-home__logo {
     height: 34px;
     padding: 30px 0 30px 0;
@@ -622,27 +597,24 @@ iframe {
   .entete-home .entete-home__search {
     box-shadow: none;
   }
-  .entete-restau {
-    height: 94px;
-  }
-  .header-restaurants-container .header-restaurants {
+  .header-restaurants {
     margin: 30px;
   }
-  .footer-container footer {
+  footer {
     padding: 60px 70px 30px 70px;
     display: flex;
     flex-direction: row-reverse;
     gap: 100px;
     align-items: flex-end;
   }
-  .footer-container footer img[src="../ASSETS/images/logo/ohmyfood@2x.svg"] {
+  footer img {
     margin-bottom: 0;
   }
-  .footer-container footer ul {
+  footer ul {
     display: flex;
     gap: 20px;
   }
-  .footer-container footer ul li {
+  footer ul li {
     margin-bottom: 0;
   }
 }

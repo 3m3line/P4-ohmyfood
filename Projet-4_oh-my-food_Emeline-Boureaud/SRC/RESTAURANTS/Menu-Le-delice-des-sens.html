@@ -25,11 +25,16 @@
   </head>
   <body>
     <div class="main-container">
-      <iframe
-        src="../TEMPLATES/header-restaurants.html"
-        title="entete des pages restaurants"
-        class="entete-restau"
-      ></iframe>
+      <header class="header-restaurants">
+        <a href="../index.html" aria-label="retour page home">
+          <i class="fa-solid fa-arrow-left"></i
+        ></a>
+        <img
+          src="../ASSETS/images/logo/ohmyfood@2x.svg"
+          alt="logo du site ohmyfood"
+          id="logo-restau"
+        />
+      </header>
       <main class="main-page-restau">
         <div class="encart-photo-menu">
           <img
@@ -170,12 +175,37 @@
           <button class="button accent-text" onclick="">Commander</button>
         </div>
       </main>
-      <footer class="footer-page-restau">
-        <iframe
-          src="../TEMPLATES/footer.html"
-          title="pied de page du site"
-          class="iframe-footer-container"
-        ></iframe>
+      <footer>
+        <img
+          src="../ASSETS/images/logo/ohmyfood@2x.svg"
+          alt="logo du site ohmyfood"
+          id="logo-footer"
+        />
+        <ul>
+          <li>
+            <i class="fa-solid fa-utensils"></i
+            ><a class="accent-text" href="#" target="_top"
+              >Proposer un restaurant</a
+            >
+          </li>
+          <li>
+            <i class="fa-solid fa-handshake-angle"></i
+            ><a class="accent-text" href="#" target="_top"
+              >Devenir partenaire</a
+            >
+          </li>
+          <li>
+            <a class="text-footer" href="#" target="_top">Mentions légales</a>
+          </li>
+          <li>
+            <a
+              class="text-footer"
+              href="mailto:contact@ohmyfood.com"
+              target="_top"
+              >Contact</a
+            >
+          </li>
+        </ul>
       </footer>
     </div>
   </body>
