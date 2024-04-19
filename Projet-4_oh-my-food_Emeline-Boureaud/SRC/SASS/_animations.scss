@@ -51,16 +51,16 @@
     cursor: pointer;
     overflow: hidden;
     .card-menu__content{
-        transition: width 0.3s ease-in-out; //Ajout de transitions pour smooth l'animation
+        transition: width 0.3s ease-in-out; 
     }
     .card-menu__icone{
         position: absolute;
-        top: 0; //Aligne l'icône avec le haut de la carte
-        right: -59px; // Cache l'icône à droite de la carte 
-        width: 59px; // Largeur de l'icône
-        height: 100%; // Hauteur de l'icône (même que la carte)
-        background-color: variables.$tertiary-color; // Couleur de fond du carré vert
-        transition: right 0.3s ease; // Animation de transition
+        top: 0; 
+        right: -59px;  
+        width: 59px; 
+        height: 100%; 
+        background-color: variables.$tertiary-color; 
+        transition: right 0.3s ease; 
         i{
             display: flex;
             align-items: center;
@@ -74,19 +74,19 @@
     &:hover,
     &:active{
         .card-menu__content{
-            width: calc(100% - 59px); // Réduisez la largeur du contenu pour laisser de la place à l'icône
+            width: calc(100% - 59px); 
             .card-menu__content__detail{
                 width: calc(100% - 30px);
                 p,
                 h3{
-                    white-space: nowrap; /* Empêche le texte de retourner à la ligne */
-                    overflow: hidden; /* Masque le texte dépassant de la zone définie */
-                    text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer que le texte est rogné */
+                    white-space: nowrap; 
+                    overflow: hidden; 
+                    text-overflow: ellipsis; 
                 }
             }
             
         }  
-        .card-menu__icone{right: 0; // Déplace l'icône vers la gauche au survol
+        .card-menu__icone{right: 0; 
         }
     }
 
